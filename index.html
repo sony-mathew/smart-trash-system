@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Smart Trash System</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="./library/jquery.js"></script>
+<script type="text/javascript">
+   $(document).ready(function(){
+   $("#indicator").mouseenter( 
+               function() {     $.ajax({
+                                    type: "POST",
+                                    url: "./library/js_bin_status.php",
+                                    dataType: "text",
+                                    success: function(data){
+                                                  $('.details').html(data);     
+                                                }
+                                  });
+             });
+        });
+       
+</script>
+</head>
+
+<body>
+<div id="wrap">
+<div id="header">
+<h1 id="sitename"><span class="big" style="margin-left:18px;"><img src="./images/logo.jpg" height="60" width="70" style="padding-top:4px;"> </span>
+ <span class="logosmall" style="font-family:comic sans ms;color:yellowgreen;"><b>Smart Trash System</b></span></h1>
+ <div style="float:right;padding-top:50px;"> Hello {username}</div>
+  <div id="navigation">
+  <ul>
+    <li class="active1"><a href="index.php?q=home">Home</a></li>
+    <li class="active2"><a href="index.php?q=map">Map</a></li>
+    <li class="active3"><a href="index.php?q=table">Tabular</a></li>
+    <li class="active4"><a href="index.php?q=new">New Bin</a></li>
+    <li class="active5"><a href="index.php?do=logout">Logout</a></li>
+  </ul>
+  </div>
+<div class="clear"></div>
+</div>
+
+<div id="contents">
+{body-content-text}
+</div>
+</div>
+<div id="footer">Copyright &copy; smarttrash.com  | Design by ynos.</div>
+
+</body>
+</html>
