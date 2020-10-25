@@ -1,4 +1,3 @@
-Author		:	ynos
-Date		:	April 2013
-Name		:	Smart Trash
-Description	:	Mini Project. To show the status of all trash bins in google maps. A portal for Municipality.
+## Smart Trash System
+
+This was done as a college project. To show the location and waste level of solar powered trash bins in google maps in a portal for Corporation to monitor and plan the waste collection and management.
